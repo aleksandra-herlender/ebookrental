@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "7170393b-e293-4ff5-9474-b31494266ea8",
+		"name": "Projekt końcowy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23713856"
+	},
+	"item": [
+		{
+			"name": "Logowanie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"aleksandra-herlender\", \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/user/login",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nieprawidowe logowanie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"aleksandra-herlender\", \"password\":\"12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/user/login",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rejestracja",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"aleksandra-herlender\", \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/user/register",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista tytułów",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/titles/?userId=3",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"titles",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie tytułu",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/titles/?userId=3&id=4",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"titles",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie tytułu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\":\"Prus\",\r\n    \"title\":\"lalka\",\r\n    \"year\":1900,\r\n    \"userId\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/titles/",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"titles",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edycja tytułu",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\":\"Bolesław Prus\",\r\n    \"title\":\"lalka\",\r\n    \"year\":1900,\r\n    \"userId\":3,\r\n    \"id\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/titles/",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"titles",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista egzemplarzy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/items/?userId=3&titleId=5",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"items",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "titleId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodanie egzemplarza",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titleId\":5,\r\n    \"userId\":3,\r\n    \"purchaseDate\":\"2021-12-13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/items/",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"items",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edycja egzemplarza",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"purchaseDate\":\"2021-12-31\",\r\n    \"userId\":3,\r\n    \"id\":8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/items/",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"items",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie egzemplarza",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/items/?userId=3&id=9",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"items",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "id",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista wypożyczeń",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/rents/?userId=3&itemId=8",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"rents",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "itemId",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wypożyczenie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemId\":8,\r\n    \"userId\":3,\r\n    \"rentDate\":\"2021-12-13\",\r\n    \"customerName\":\"Aleksander Fredro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/rents/",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"rents",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edycja wypożyczenia",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":11,\r\n    \"userId\":3,\r\n    \"rentDate\":\"2021-12-13\",\r\n    \"expirationDate\": \"2021-12-31\",\r\n    \"customerName\":\"Aleksander Fredro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/rents/",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"rents",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usunięcie wypożyczenia",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ta-ebookrental-prod-kodilla-xmhvai.mo1.mogenius.io/rents/?userId=3&id=11",
+					"protocol": "https",
+					"host": [
+						"ta-ebookrental-prod-kodilla-xmhvai",
+						"mo1",
+						"mogenius",
+						"io"
+					],
+					"path": [
+						"rents",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
